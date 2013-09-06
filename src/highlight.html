@@ -1,0 +1,36 @@
+<polymer-element name="highlight" attributes="tabreplace height width">
+  <script>
+    Polymer('highlight', {
+       tabreplace: '  ',
+       height: '500',
+       width: '500',
+       created: function () {
+         var script = document.createElement('script'),
+         body = document.body;
+
+         script.setAttribute("src", "http://yandex.st/highlightjs/7.3/highlight.min.js");
+
+         body.appendChild(script);
+         var that = this;
+         script.onload = function() {
+           hljs.initHighlightingOnLoad();
+           var temp = that.innerHTML;
+           that.innerHTML = "";
+           var pre = document.createElement('pre');
+           var code = document.createElement('code');
+           code.innerHTML = temp;
+
+           code.style.width = that.width + 'px';
+           code.style.height = that.height + 'px';
+
+           pre.appendChild(code);
+           that.appendChild(pre);
+
+           $(document).ready(function() {
+              $(that).each(function(i, e) {hljs.highlightBlock(e, this.tabreplace)});
+           });
+         }
+       }
+    });
+  </script>
+</polymer-element>

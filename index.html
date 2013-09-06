@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>&lt;highlight&gt;</title>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.0.20130816/polymer.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="skins/tomorrow-night-eighties.css">
+  <link rel="import" href="src/highlight.html">
+</head>
+<body>
+
+  <!-- Using Highlight Custom Element -->
+  <highlight height="500" width="500">
+    @requires_authorization
+def somefunc(param1='', param2=0):
+    r'''A docstring'''
+    if param1 &gt; param2: # interesting
+        print 'Gre\'ater'
+    return (param2 - param1 + 1) or None
+
+class SomeClass:<br>    pass
+
+&gt;&gt;&gt; message = '''interpreter
+... prompt'''
+  </highlight>
+
+</body>
+</html>
