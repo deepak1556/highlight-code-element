@@ -1,4 +1,4 @@
-# &lt;highlight&gt;
+# &lt;highlight-code&gt;
 
 A web component wrapper to highlight code snippets in any webpage using ```highlighterJs```.
 
@@ -25,7 +25,7 @@ A web component wrapper to highlight code snippets in any webpage using ```highl
 3. Start using it!
 
    ```html
-   <highlight></highlight>
+   <highlight-code></highlight-code>
    ```
 
 ## Options
