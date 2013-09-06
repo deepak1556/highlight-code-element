@@ -1,18 +1,23 @@
 <polymer-element name="highlight" attributes="tabreplace height width">
   <script>
+    var injected = false;
     Polymer('highlight', {
        tabreplace: '  ',
        height: '500',
        width: '500',
        created: function () {
+        if(!injected) {
          var script = document.createElement('script'),
          body = document.body;
 
          script.setAttribute("src", "http://yandex.st/highlightjs/7.3/highlight.min.js");
 
          body.appendChild(script);
+        }
+
          var that = this;
          script.onload = function() {
+           injected = true;
            hljs.initHighlightingOnLoad();
            var temp = that.innerHTML;
            that.innerHTML = "";
