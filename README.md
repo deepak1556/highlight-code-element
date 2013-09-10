@@ -6,7 +6,7 @@ A web component wrapper to highlight code snippets in any webpage using ```highl
 
 ## Demo
 
-> [Check it live](http://deepak1556.github.io/highlighter-element).
+> [Check it live](http://deepak1556.github.io/highlight-code-element).
 
 ## Usage
 
